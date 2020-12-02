@@ -1,0 +1,453 @@
+/* might be useful to have a section for type instead of adjusting type for each view*/
+
+body{
+    margin:0;
+    overflow-x: hidden;
+}
+
+/******************/
+/* HOME PAGE STYLE*/
+/******************/
+.nav-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #1B2F36;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+}
+.nav-bar p{
+    color:#FFFEF0;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+.nav-bar:hover{
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+#home{
+    background-color: #1B2F36;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#title{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    width: 100%;
+}
+.title-text{
+    font-family: 'Nerko One', cursive;
+    font-size: 500%;
+    text-align: center;
+    background: url(https://images.unsplash.com/photo-1533158137080-d6f3c16ad66b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1872&q=80) center;
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.nav-item{
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color: #FFFEF0;
+    font-size: 200%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.nav-home:hover{
+    cursor: pointer;
+    color: lightgray;
+}
+.one:hover, .nav-brushes:hover{
+    color:#65C3B3;
+    cursor: pointer;
+}
+.two:hover, .nav-paints:hover{
+    color:#749AD2;
+    cursor: pointer;
+}
+.three:hover, .nav-techniques:hover{
+    color:#FBD4E6;
+    cursor: pointer;
+}
+h2:hover{
+    cursor: pointer;
+}
+.group4{
+    position: absolute;
+    right: 5vw;
+    bottom: -4vh;
+}
+.g4{
+    transform: translate(5vw, -5vh);
+}
+.blue4{
+    transform: translate(8vw, 3vh);
+}
+.group3{
+    position: absolute;
+    left: -13vw;
+    bottom: 15vh;
+    transform: rotate(90deg);
+}
+.g3{
+    transform: scaleY(1.8);
+}
+.p3{
+    transform: rotate(-50deg) translate(6vw, -5vh);
+}
+.blue3{
+    transform: scaleY(1.5) rotate(-31deg) translate(5vh, 5vh);
+}
+.group2{
+    position: absolute;
+    transform: rotate(270deg);
+    right: -8vw;
+    top: 20vh;
+}
+.p2{
+    transform: rotate(-40deg);
+}
+.blue2{
+    transform: translateX(5vh) scaley(1.3);
+}
+.group1{
+    position: absolute;
+    transform: rotate(180deg);
+    top: -3vh;
+    left: 20vw;
+}
+.blue1{
+    transform: translateX(-4vw);
+}
+.p1{
+    transform: rotate(-60deg) translate(0vh, -12vw);
+}
+.g1{
+    transform: rotateY(180deg) scaleY(1.5);
+}
+
+/******************/
+/*TECHNIQUES STYLE*/
+/******************/
+
+#techniques{
+    display:flex;
+    flex-direction: column;
+    background-color: #FFFEF0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.pinkstripe{
+    height: 12px;
+    width: 5vw;
+    background-color: #FBD4E6;
+    border-radius: 3%;
+}
+h2{
+    font-family:'Nerko One', cursive;
+    font-size: 64px;
+    color: #324B54;
+    padding: 0px 12px 0px 12px;
+}
+h3{
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    color: #3C5762;
+    padding-left: 20px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vh 2vw 0vh 0vw;
+}
+.row1,.row2{
+    display:flex;
+    flex-direction: row;
+}
+.card, .back{
+    /* i realized im using vw for vh idk why it work*/
+    height:16vw;
+    border-radius: 3%;
+    border: 2px solid #D092AF;
+    margin: 2vh 1vw 2vh 1vw;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.back h4{
+    font-size: 20px;
+}
+.back p{
+    font-size: 18px;
+}
+.back{
+    text-align: center;
+    background-color: #CED6E1;
+    padding: 0px 10px 0px 10px;
+}
+.outer-card{
+    height:16vw;
+    width:16vw;
+    padding: 1vw 2vw 1vw 2vw;
+}
+.card:hover{
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    transform: scale(1.07);
+    transition-duration: 0.3s;
+}
+
+
+
+/******************/
+/*PAINTS STYLE*/
+/******************/
+
+#paints{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    background-color: #FFFEF0;
+    height: 100vh;
+    overflow: hidden;
+}
+.bluestripe{
+    height: 12px;
+    width: 5vw;
+    background-color: #749AD2;
+    border-radius: 3%;
+}
+h4{
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #324B54;
+}
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    color: #3C5762;
+}
+
+.palette{
+    position: absolute;
+    left: -12%;
+    bottom: -10%;
+    width: 107vw;
+    height: 90vh;
+}
+.palette-top{
+    z-index: 1;
+}
+.paint-description{
+    position: absolute;
+    text-align:center;
+    width: 30vw;
+    left: 18vw;
+    bottom: 26vh;
+    display: none;
+}
+.paint{
+    width:8vw;
+    height:15vh;
+}
+.oval{
+    height:13vh;
+    width:14vw;
+    background: #FFFEF0;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 65vw;
+    top: 81vh;
+    transform: rotate(-10deg);
+}
+#p-black{
+    position: absolute;
+    bottom: 5vh;
+    left: 14vw;
+
+}
+#p-brown{
+    position: absolute;
+    bottom: 18vh;
+    left: 3vw;
+
+}
+#p-white{
+    position: absolute;
+    bottom: 39vh;
+    left: 2vw;
+    transform: rotate(-30deg);
+
+}
+#p-yellow{
+    position: absolute;
+    bottom: 57vh;
+    left: 10vw;
+    transform: rotate(-30deg);
+
+}
+#p-red{
+    position: absolute;
+    bottom: 60vh;
+    left: 24vw;
+
+}
+#p-purple{
+    position: absolute;
+    bottom: 58vh;
+    left: 38vw;
+
+}
+#p-blue{
+    position: absolute;
+    bottom: 51vh;
+    left: 50vw;
+
+}
+#p-green{
+    position: absolute;
+    bottom: 35vh;
+    left: 58vw;
+
+}
+.paint:hover{
+    cursor: url("brushcursor.png"), pointer;
+}
+.paint-description:hover{
+    cursor: url("wipecursor.png"), pointer
+}
+
+/******************/
+/*BRUSHES STYLE*/
+/******************/
+#brushes{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    background-color: #FFFEF0;
+    height: 100vh;
+    overflow: hidden;
+}
+#brushes .row1{
+    justify-content: space-evenly;
+}
+#brushes .row2{
+    justify-content: center;
+}
+.greenstripe{
+    height: 12px;
+    width: 5vw;
+    background-color: #65C3B3;
+    border-radius: 3%;
+}
+#brushes h4{
+    font-size: 20px;
+}
+#brushes p{
+    font-size: 18px;
+}
+.brush-description{
+    width:12vw;
+    text-align: center;
+}
+.brush-description:hover{
+    cursor: default;
+}
+.brush{
+    height: 50vh;
+    z-index: 1;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#b4{
+    padding-left: 4vw;
+}
+#b5{
+    padding-left: 2vw;
+}
+.pouch-back{
+    position: absolute;
+    bottom: 0vh;
+    width: 90vw;
+    left: 5vw;
+}
+.pouch-front{
+    position: absolute;
+    bottom: 0vh;
+    width: 80vw;
+    left: 10vw;
+    z-index:2;
+}
+.brush:hover, #b4:hover, #b5:hover{
+    cursor: pointer;
+}
+
+#brushes .row2{
+    position: absolute;
+    left: 8vw;
+    bottom: -30vh;
+}
+.moveup{
+    transform: translateY(-25vh);
+    transition-duration: 0.5s;
+}
+.movedown{
+    transform: translateY(15vh);
+    transition-duration: 0.5s;
+}
+.block{
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+.appear{
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.disappear{
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+#d1, #d2, #d3, #d4, #d5, #d6, #d7{
+    opacity: 0;
+}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes fadeOut{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
